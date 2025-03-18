@@ -1,0 +1,329 @@
+body{
+    --bg-color:#165588;
+    --dark-bg-color:#0C1E2A;
+    --light-bg-color:#279ACD;
+}
+*{
+    box-sizing: border-box;
+}
+body, html, h1, h2, h3, h4, h5, p, main, header, footer, aside, nav, div {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(39,154,205);
+    background: radial-gradient(circle, rgba(39,154,205,1) 70%, rgba(31,121,172,1) 88%, rgba(12,30,42,1) 100%);
+    font-family: sans-serif;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* clases  */
+.hidden{
+    display: none;
+}
+.appear{
+    display: flex;
+}
+
+/* bien y mal  */
+.good{
+    color: #25a72c;
+}
+.bad{
+    color: #f09;
+}
+/* header  */
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    text-shadow: 2px 2px 2px #fff;
+}
+.header__title{
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 35px;
+    width: 300px;
+    
+    background-image: url(/assets/images/fireGifAnimation.gif);
+    background-size: contain;
+}
+.character__wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.character__div{
+    width: 100%;
+    height: 260px;
+}
+
+.character-1{
+    background-image: url(/assets/images/gojocharacter1.avif);
+    background-size: cover;
+    background-position: center;
+    transform: translateX(100dvw);
+    animation: rightToCenter 2.5s cubic-bezier(0.75, -0.5, 0.25, 1.5) forwards;
+}
+.character-2{
+    background-image: url(/assets/images/sukunacharacter2.webp);
+    background-size: cover;
+    background-position: center;
+    transform: translateX(-100dvw);
+    animation: leftToCenter 3.5s  cubic-bezier(0.75, -0.5, 0.25, 1.5) forwards;
+}
+
+.character-1:is(:hover,:active){
+    filter: saturate(200%) contrast(180%) brightness(1.2) hue-rotate(10deg);
+}
+.character-2:is(:hover,:active){
+    filter: saturate(200%) contrast(180%) brightness(1.2) hue-rotate(10deg);
+}
+
+@keyframes rightToCenter {
+    to{
+        transform: translateX(0);
+    }
+     
+}
+@keyframes leftToCenter {
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+.main__event-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    height: auto;
+    
+    color: #fff;
+    background: rgb(227,59,77);
+    background: radial-gradient(circle, rgba(227,59,77,1) 5%, rgba(101,14,21,1) 50%, rgba(222,45,66,1) 100%);
+    box-shadow: 5px 10px 10px var(--bg-color);
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+.main__tittle-container{
+    margin-top: 50px;
+}
+.main__tittle{
+    background-color: #ffffff80;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.main__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: clamp(50%, 65%, 90%);
+    text-wrap: wrap;
+    background-image: url(/assets/images/itadoriGif.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    height: 100dvh;
+    color: rgb(71, 29, 29);
+    font-weight: 600;
+    border-radius: 10px;
+    filter: blur(50%);
+    margin-bottom: 50px;
+}
+.main__text{
+    padding: 10px;
+    background-color: #ffffff67;
+}
+.main__info p{
+    margin: 10px 0px 0px 0px;
+    
+    
+}
+
+
+.button__wrapper{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.buttons{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 0px 5px 0px 5px;
+    opacity: 0.7;
+}
+.buttons:hover{
+    animation:fireButton 3s infinite both 
+}
+
+/* Modal del mensaje} */
+
+.modal__main{
+    
+    width: 300px;
+    height: 150px;
+    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 350px;
+    z-index: 5;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+}
+.modal__close{
+   position: absolute;
+   right: 0;
+   padding: 5px;
+}
+.modal__close:is(:hover,:active){
+    color: rgb(126, 48, 48);
+}
+.modal__msg{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 65px;
+    word-wrap: break-word;
+}
+
+
+
+/* section wrapper  */
+.section{
+    width: 100%;
+    color: #fff;
+    background: rgb(226,0,208);
+    background: radial-gradient(circle, rgba(226,0,208,1) 1%, rgba(12,30,88,1) 99%);
+    height: 100dvh;
+}
+.section__wrapper{
+    display: flex;
+    width: 100%;
+    margin: 0px 5px 0px 5px;
+}
+.section__tittle{
+    text-align: center;
+    padding: 10px;
+
+}
+.section__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 30px;
+    padding: 5px;
+    height: 50dvh;
+    
+}
+.section__info a{
+    text-decoration: none;
+    color: #c24b4b;
+    font-weight: 600;
+}
+.section__info a:hover{
+    text-decoration: underline;
+}
+.images__reference-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.images__reference-wrapper img{
+    width: 100%;
+    height: 100%;
+   object-fit: contain;
+}
+.gallery__button{
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    animation:fireButton 3s infinite both alternate-reverse ;
+}
+.gallery__button:hover{
+    padding: 20px;
+    box-shadow: 5px 9px 20px #30070794;
+    font-size: 16px;
+    
+}
+
+/* animation button  */
+@keyframes fireButton{
+    0% {
+        background: rgb(227, 59, 77); /* color plano base */
+        color: #256edb;
+      }
+      100% {
+        background: radial-gradient(
+          circle,
+          rgba(101, 14, 21, 1) 0%,
+          rgba(227, 59, 77, 1) 90%,
+          rgba(222, 45, 66, 1) 99%
+        );
+        color: #fff;
+      }
+}
+
+/* Gallery container absolute */
+
+.gallery__container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    flex-direction: column;
+    width: 80dvw;
+    height: 450px;
+    margin: auto;
+    background-color: #256edb;
+    
+}
+.gallery__close-button{
+    position: absolute;
+    width: 50px;
+    right: 0;
+    border: none;
+    padding: 10px;
+    animation:fireButton 3s infinite both alternate-reverse ;
+    border-radius: 5px;
+}
+
+
+
+.footer{
+    display: flex;
+    color: #fff;
+    justify-content: space-around;
+    padding: 10px;
+}
+.footer a{
+    text-decoration: none;
+    color: inherit;
+}
+.footer a:hover{
+    color: #f09;
+    
+}
