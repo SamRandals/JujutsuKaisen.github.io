@@ -50,7 +50,7 @@ body{
     font-weight: 35px;
     width: 300px;
     
-    background-image: url(/assets/images/fireGifAnimation.gif);
+    background-image: url(../images/fireGifAnimation.gif);
     background-size: contain;
 }
 .character__wrapper{
@@ -64,14 +64,14 @@ body{
 }
 
 .character-1{
-    background-image: url(/assets/images/gojocharacter1.avif);
+    background-image: url(../images/gojocharacter1.avif);
     background-size: cover;
     background-position: center;
     transform: translateX(100dvw);
     animation: rightToCenter 2.5s cubic-bezier(0.75, -0.5, 0.25, 1.5) forwards;
 }
 .character-2{
-    background-image: url(/assets/images/sukunacharacter2.webp);
+    background-image: url(../images/sukunacharacter2.webp);
     background-size: cover;
     background-position: center;
     transform: translateX(-100dvw);
